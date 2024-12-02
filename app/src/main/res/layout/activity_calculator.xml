@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:paddingTop="48dp"
+        android:text="PocketConvertor"
+        android:textAlignment="center"
+        android:textColor="@color/principal"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_hint_result"
+        android:layout_marginTop="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The converter result is:"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+
+        android:id="@+id/tv_total"
+        android:layout_marginBottom="32sp"
+        android:paddingBottom="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/primary_nightBlue"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_result"
+        tools:text="360 Kg"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_weight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_weight"
+            android:background="@drawable/curved_border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Type the the value to be converted"
+            android:inputType="numberDecimal"
+            android:paddingStart="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/sp_weight_left"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintStart_toStartOf="@+id/til_weight"
+        app:layout_constraintTop_toBottomOf="@+id/til_weight" />
+
+    <Spinner
+        android:id="@+id/sp_weight_right"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_weight"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintTop_toBottomOf="@+id/til_weight" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_distance"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_weight_left">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_distance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/curved_border"
+            android:hint="Type the the value to be converted"
+            android:inputType="numberDecimal"
+            android:paddingStart="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Spinner
+        android:id="@+id/sp_distance_left"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintStart_toStartOf="@+id/til_distance"
+        app:layout_constraintTop_toBottomOf="@+id/til_distance" />
+
+    <Spinner
+        android:id="@+id/sp_distance_Right"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_volume"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintTop_toBottomOf="@+id/til_distance" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_volume"
+        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_distance_left">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tie_volume"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/curved_border"
+            android:hint="Type the the value to be converted"
+            android:inputType="numberDecimal"
+            android:paddingStart="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/sp_volume_left"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintStart_toStartOf="@+id/til_volume"
+        app:layout_constraintTop_toBottomOf="@+id/til_volume" />
+
+    <Spinner
+        android:id="@+id/sp_volume_Right"
+        android:layout_width="188dp"
+        android:layout_height="38dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_volume"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintTop_toBottomOf="@+id/til_volume" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/principal"
+        android:text="Calculate"
+        android:layout_width="170dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideLine"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="205dp"/>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="48dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="170dp"
+        android:layout_height="36dp"
+        android:backgroundTint="@color/white"
+        android:text="Clear"
+        android:textColor="@color/principal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideLine"
+        app:strokeColor="@color/principal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
